@@ -31,15 +31,6 @@ ItoKMCSubclass<I, C, R, F>::ItoKMCSubclass(RefCountedPtr<ItoKMCPhysics>& a_physi
 }
 
 template <typename I, typename C, typename R, typename F>
-ItoKMCSubclass<I, C, R, F>::~ItoKMCSubclass()
-{
-  CH_TIME("ItoKMCSubclass::~ItoKMCSubclass");
-  if (this->m_verbosity > 5) {
-    pout() << "ItoKMCSubclass::~ItoKMCSubclass" << endl;
-  }
-}
-
-template <typename I, typename C, typename R, typename F>
 void
 ItoKMCSubclass<I, C, R, F>::refillSolversExceptSigma() noexcept
 {
@@ -92,7 +83,9 @@ ItoKMCSubclass<I, C, R, F>::regrid(const int a_lmin, const int a_oldFinestLevel,
   }
 
   // Doing this because ItoKMCGodunovStepper runs a different regrid routine that also takes into account
-  // the semi-implicit update. But that's not relevant on restarts becaue all the space charge is reset.
+  // the semi-implicit update. But that's not relevant on restarts becaue all the space charge is reset. We can
+  // call the usual regrid method (or alternatively, reset all the semi-implicit stuff but that's 5 extra lines of
+  // code.
   if (m_restart) {
     this->refillSolversExceptSigma();
 

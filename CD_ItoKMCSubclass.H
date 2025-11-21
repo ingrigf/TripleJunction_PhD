@@ -40,7 +40,7 @@ namespace Physics {
       /*!
 	@brief Destructor. Does nothing
       */
-      virtual ~ItoKMCSubclass();
+      virtual ~ItoKMCSubclass() = default;
 
       /*!
 	@brief Regrid methods -- puts all data on the new mesh. 
