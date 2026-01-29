@@ -72,21 +72,21 @@ MechanicalShaft.use_dielectric     = true    ## Turn on/off dielectric
 MechanicalShaft.electrode.orientation      = "+y"     ## Electrode orientation
 MechanicalShaft.electrode.translate        = 0 0 0    ## Electrode translation after rotation
 MechanicalShaft.electrode.live             = false     ## Live electrode or not
-MechanicalShaft.electrode.length           = 3e-2      ## Electrode length
+MechanicalShaft.electrode.length           = 2e-2      ## Electrode length
 MechanicalShaft.electrode.outer.radius     = 9e-2      ## Electrode outer radius
-MechanicalShaft.electrode.inner.radius     = 15.1e-3     ## Electrode inner radius
-MechanicalShaft.electrode.curvature        = 191e-6      ## Curvature. Must be > 0.0
+MechanicalShaft.electrode.inner.radius     = 15199e-6     ## Electrode inner radius
+MechanicalShaft.electrode.curvature        = 200e-6      ## Curvature. Must be > 0.0
 
 # Main dielectric settings
 --------------------------
 MechanicalShaft.dielectric.shape            = cylinder    ## 'polygon', 'cylinder', or 'circular_profiles'
-MechanicalShaft.dielectric.permittivity     = 4.3                 ## Dielectric permittivity
+MechanicalShaft.dielectric.permittivity     = 4.3                  ## Dielectric permittivity
 MechanicalShaft.dielectric.orientation      = "+y"                 ## Dielectric orientation
 MechanicalShaft.dielectric.translate        = 0 0 0                ## Dielectric translation after rotatino
 
 # Subsettings for 'cylinder'
 ----------------------------
-MechanicalShaft.dielectric.cylinder.radius     = 15.001e-3    ## Cylinder radius
+MechanicalShaft.dielectric.cylinder.radius     = 15e-3    ## Cylinder radius
 
 # Subsettings for 'polygon'
 ---------------------------
